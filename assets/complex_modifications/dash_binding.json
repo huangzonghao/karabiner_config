@@ -1,0 +1,123 @@
+{
+  "title": "Dash keys",
+  "rules": [
+    {
+      "description": "Dash: Left_Cmd + H/L Switch Tabs and Right_Cmd + H/L Go Back/Forward (for DV only and requries system shortcut setup)",
+      "manipulators": [
+          {
+              "description": "Right Option + H to Cmd + Option + H",
+              "from": {
+                  "key_code": "j",
+                  "modifiers":{
+                      "mandatory":["right_option"]
+                  }
+              },
+              "to": [
+                  {
+                    "key_code": "j",
+                    "modifiers":[
+                        "command",
+                        "option"
+                    ]
+                  }
+              ],
+              "conditions": [
+                  {
+                      "bundle_identifiers": [
+                          "^com\\.kapeli\\.dashdoc$"
+                      ],
+                      "type": "frontmost_application_if"
+                  }
+              ],
+              "type": "basic"
+          },
+
+          {
+              "description": "Right Option + L to Cmd + Option + L",
+              "from": {
+                  "key_code": "p",
+                  "modifiers":{
+                      "mandatory":["right_option"]
+                  }
+              },
+              "to": [
+                  {
+                    "key_code": "p",
+                    "modifiers":[
+                        "command",
+                        "option"
+                    ]
+                  }
+              ],
+              "conditions": [
+                  {
+                      "bundle_identifiers": [
+                          "^com\\.kapeli\\.dashdoc$"
+                      ],
+                      "type": "frontmost_application_if"
+                  }
+              ],
+              "type": "basic"
+          },
+
+          {
+              "description": "Cmd + H to Cmd + Shift + H",
+              "from": {
+                  "key_code": "j",
+                  "modifiers":{
+                      "mandatory":["command"]
+                  }
+              },
+              "to": [
+                  {
+                    "key_code": "j",
+                    "modifiers":[
+                        "command",
+                        "shift"
+                    ]
+                  }
+              ],
+              "conditions": [
+                  {
+                      "bundle_identifiers": [
+                          "^com\\.kapeli\\.dashdoc$"
+                      ],
+                      "type": "frontmost_application_if"
+                  }
+              ],
+              "type": "basic"
+          },
+
+          {
+              "description": "Cmd + L to Cmd + Shift + L",
+              "from": {
+                  "key_code": "p",
+                  "modifiers":{
+                      "mandatory":["command"]
+                  }
+              },
+              "to": [
+                  {
+                    "key_code": "p",
+                    "modifiers":[
+                        "command",
+                        "shift"
+                    ]
+                  }
+              ],
+              "conditions": [
+                  {
+                      "bundle_identifiers": [
+                          "^com\\.kapeli\\.dashdoc$"
+                      ],
+                      "type": "frontmost_application_if"
+                  }
+              ],
+              "type": "basic"
+          }
+
+      ]
+    }
+  ]
+}
+

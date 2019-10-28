@@ -1,0 +1,155 @@
+{
+  "title": "Finder Keybindings",
+  "rules": [
+    {
+      "description": "Finder: Define Ctrl + H/L/P/N/D/U to navigate within Finder (for DV keyboard only)",
+      "manipulators": [
+          {
+              "description": "<C-P> to <Up> in finder",
+              "from": {
+                  "key_code": "r",
+                  "modifiers":{
+                      "mandatory":["control"],
+                      "optional":["shift"]
+                  }
+              },
+              "to": [
+                  {
+                      "key_code": "up_arrow"
+                  }
+              ],
+              "conditions": [
+                  {
+                      "bundle_identifiers": [
+                          "^com\\.apple\\.finder$"
+                      ],
+                      "type": "frontmost_application_if"
+                  }
+              ],
+              "type": "basic"
+          },
+          {
+              "description": "<C-N> to <Down> in finder",
+              "from": {
+                  "key_code": "l",
+                  "modifiers":{
+                      "mandatory":["control"],
+                      "optional":["shift"]
+                  }
+              },
+              "to": [
+                  {
+                      "key_code": "down_arrow"
+                  }
+              ],
+              "conditions": [
+                  {
+                      "bundle_identifiers": [
+                          "^com\\.apple\\.finder$"
+                      ],
+                      "type": "frontmost_application_if"
+                  }
+              ],
+              "type": "basic"
+          },
+          {
+              "description": "<C-H> to <Left> in finder",
+              "from": {
+                  "key_code": "j",
+                  "modifiers":{
+                      "mandatory":["control"],
+                      "optional":["shift"]
+                  }
+              },
+              "to": [
+                  {
+                      "key_code": "left_arrow"
+                  }
+              ],
+              "conditions": [
+                  {
+                      "bundle_identifiers": [
+                          "^com\\.apple\\.finder$"
+                      ],
+                      "type": "frontmost_application_if"
+                  }
+              ],
+              "type": "basic"
+          },
+          {
+              "description": "<C-L> to <Right> in finder",
+              "from": {
+                  "key_code": "p",
+                  "modifiers":{
+                      "mandatory":["control"],
+                      "optional":["shift"]
+                  }
+              },
+              "to": [
+                  {
+                      "key_code": "right_arrow"
+                  }
+              ],
+              "conditions": [
+                  {
+                      "bundle_identifiers": [
+                          "^com\\.apple\\.finder$"
+                      ],
+                      "type": "frontmost_application_if"
+                  }
+              ],
+              "type": "basic"
+          },
+          {
+              "description": "<C-D> to <Cmd-Down> in finder",
+              "from": {
+                  "key_code": "h",
+                  "modifiers":{
+                      "mandatory":["control"]
+                  }
+              },
+              "to": [
+                  {
+                      "key_code": "down_arrow",
+                      "modifiers": "left_command"
+                  }
+              ],
+              "conditions": [
+                  {
+                      "bundle_identifiers": [
+                          "^com\\.apple\\.finder$"
+                      ],
+                      "type": "frontmost_application_if"
+                  }
+              ],
+              "type": "basic"
+          },
+          {
+              "description": "<C-U> to <Cmd-Up> in finder",
+              "from": {
+                  "key_code": "f",
+                  "modifiers":{
+                      "mandatory":["control"]
+                  }
+              },
+              "to": [
+                  {
+                      "key_code": "up_arrow",
+                      "modifiers": "left_command"
+                  }
+              ],
+              "conditions": [
+                  {
+                      "bundle_identifiers": [
+                          "^com\\.apple\\.finder$"
+                      ],
+                      "type": "frontmost_application_if"
+                  }
+              ],
+              "type": "basic"
+          }
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,66 @@
+{
+  "title": "iTerm2 keys",
+  "rules": [
+    {
+      "description": "iTerm2: Use Left Cmd + H/L to Switch between Panes (For DV keyboard only)",
+      "manipulators": [
+          {
+              "description": "Right Cmd + H to Cmd + Shift + H",
+              "from": {
+                  "key_code": "j",
+                  "modifiers":{
+                      "mandatory":["right_command"]
+                  }
+              },
+              "to": [
+                  {
+                    "key_code": "j",
+                    "modifiers":[
+                        "left_command",
+                        "left_shift"
+                    ]
+                  }
+              ],
+              "conditions": [
+                  {
+                      "bundle_identifiers": [
+                          "^com\\.googlecode\\.iterm2$"
+                      ],
+                      "type": "frontmost_application_if"
+                  }
+              ],
+              "type": "basic"
+          },
+
+          {
+              "description": "Right Cmd + L to Cmd + Shift + L",
+              "from": {
+                  "key_code": "p",
+                  "modifiers":{
+                      "mandatory":["right_command"]
+                  }
+              },
+              "to": [
+                  {
+                    "key_code": "p",
+                    "modifiers":[
+                        "left_command",
+                        "left_shift"
+                    ]
+                  }
+              ],
+              "conditions": [
+                  {
+                      "bundle_identifiers": [
+                          "^com\\.googlecode\\.iterm2$"
+                      ],
+                      "type": "frontmost_application_if"
+                  }
+              ],
+              "type": "basic"
+          }
+      ]
+    }
+  ]
+}
+

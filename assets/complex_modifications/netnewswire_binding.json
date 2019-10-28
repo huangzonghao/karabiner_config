@@ -1,0 +1,93 @@
+{
+  "title": "NetNewsWire Keys",
+  "rules": [
+    {
+      "description": "NetNewsWire: HLJK to arrow keys)",
+      "manipulators": [
+          {
+            "description": "H to left",
+              "from": {
+                  "key_code": "j"
+              },
+              "to": [
+                  {
+                    "key_code": "left_arrow"
+                  }
+              ],
+              "conditions": [
+                  {
+                      "bundle_identifiers": [
+                          "^com\\.ranchero\\.NetNewsWire-Evergreen$"
+                      ],
+                      "type": "frontmost_application_if"
+                  }
+              ],
+              "type": "basic"
+          },
+          {
+              "description": "l to right",
+              "from": {
+                  "key_code": "p"
+              },
+              "to": [
+                  {
+                    "key_code": "right_arrow"
+                  }
+              ],
+              "conditions": [
+                  {
+                      "bundle_identifiers": [
+                          "^com\\.ranchero\\.NetNewsWire-Evergreen$"
+                      ],
+                      "type": "frontmost_application_if"
+                  }
+              ],
+              "type": "basic"
+          },
+          {
+              "description": "J to down",
+              "from": {
+                  "key_code": "c"
+              },
+              "to": [
+                  {
+                    "key_code": "down_arrow"
+                  }
+              ],
+              "conditions": [
+                  {
+                      "bundle_identifiers": [
+                          "^com\\.ranchero\\.NetNewsWire-Evergreen$"
+                      ],
+                      "type": "frontmost_application_if"
+                  }
+              ],
+              "type": "basic"
+          },
+          {
+              "description": "K to up",
+              "from": {
+                  "key_code": "v"
+              },
+              "to": [
+                  {
+                    "key_code": "up_arrow"
+                  }
+              ],
+              "conditions": [
+                  {
+                      "bundle_identifiers": [
+                          "^com\\.ranchero\\.NetNewsWire-Evergreen$"
+                      ],
+                      "type": "frontmost_application_if"
+                  }
+              ],
+              "type": "basic"
+          }
+
+
+      ]
+    }
+  ]
+}
+

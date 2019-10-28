@@ -1,0 +1,57 @@
+{
+  "title": "WeChat Keybindings",
+  "rules": [
+    {
+      "description": "WeChat: Define Ctrl + P/N to move up and down",
+      "manipulators": [
+          {
+              "description": "<C-P> to <Up> in wechat",
+              "from": {
+                  "key_code": "r",
+                  "modifiers":{
+                      "mandatory":["control"]
+                  }
+              },
+              "to": [
+                  {
+                      "key_code": "up_arrow"
+                  }
+              ],
+              "conditions": [
+                  {
+                      "bundle_identifiers": [
+                          "^com\\.tencent\\.xinWeChat$"
+                      ],
+                      "type": "frontmost_application_if"
+                  }
+              ],
+              "type": "basic"
+          },
+          {
+              "description": "<C-N> to <Down> in wechat",
+              "from": {
+                  "key_code": "l",
+                  "modifiers":{
+                      "mandatory":["control"]
+                  }
+              },
+              "to": [
+                  {
+                      "key_code": "down_arrow"
+                  }
+              ],
+              "conditions": [
+                  {
+                      "bundle_identifiers": [
+                          "^com\\.tencent\\.xinWeChat$"
+                      ],
+                      "type": "frontmost_application_if"
+                  }
+              ],
+              "type": "basic"
+          }
+      ]
+    }
+  ]
+}
+

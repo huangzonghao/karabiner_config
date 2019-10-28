@@ -1,0 +1,70 @@
+{
+  "title": "Chrome keys",
+  "rules": [
+    {
+      "description": "Chrome: Right Cmd + H/L to Go backward/forward (for DV only and requries system shortcut setup)",
+      "manipulators": [
+          {
+              "description": "Right Opt + H to Cmd + Shift + Option + H",
+              "from": {
+                  "key_code": "j",
+                  "modifiers":{
+                      "mandatory":["right_option"]
+                  }
+              },
+              "to": [
+                  {
+                    "key_code": "j",
+                    "modifiers":[
+                        "command",
+                        "shift",
+                        "option"
+                    ]
+                  }
+              ],
+              "conditions": [
+                  {
+                      "bundle_identifiers": [
+                          "^com\\.google\\.Chrome$"
+                      ],
+                      "type": "frontmost_application_if"
+                  }
+              ],
+              "type": "basic"
+          },
+
+          {
+              "description": "Right Opt + L to Cmd + Shift + Option + ]",
+              "from": {
+                  "key_code": "p",
+                  "modifiers":{
+                      "mandatory":["right_option"]
+                  }
+              },
+              "to": [
+                  {
+                    "key_code": "p",
+                    "modifiers":[
+                        "command",
+                        "shift",
+                        "option"
+                    ]
+                  }
+              ],
+              "conditions": [
+                  {
+                      "bundle_identifiers": [
+                          "^com\\.google\\.Chrome$"
+                      ],
+                      "type": "frontmost_application_if"
+                  }
+              ],
+              "type": "basic"
+          }
+
+
+      ]
+    }
+  ]
+}
+
