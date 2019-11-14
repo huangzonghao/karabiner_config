@@ -2,12 +2,15 @@
   "title": "NetNewsWire Keys",
   "rules": [
     {
-      "description": "NetNewsWire: HLJK to arrow keys)",
+      "description": "NetNewsWire: Ctrl + NPDU to arrow keys - similar to finder",
       "manipulators": [
           {
-            "description": "H to left",
+            "description": "Ctrl U to left",
               "from": {
-                  "key_code": "j"
+                  "key_code": "f",
+                  "modifiers":{
+                      "mandatory":["control"]
+                  }
               },
               "to": [
                   {
@@ -25,9 +28,12 @@
               "type": "basic"
           },
           {
-              "description": "l to right",
+              "description": "Ctrl D to right",
               "from": {
-                  "key_code": "p"
+                  "key_code": "h",
+                  "modifiers":{
+                      "mandatory":["control"]
+                  }
               },
               "to": [
                   {
@@ -45,9 +51,12 @@
               "type": "basic"
           },
           {
-              "description": "J to down",
+              "description": "Ctrl N to down",
               "from": {
-                  "key_code": "c"
+                  "key_code": "l",
+                  "modifiers":{
+                      "mandatory":["control"]
+                  }
               },
               "to": [
                   {
@@ -65,9 +74,12 @@
               "type": "basic"
           },
           {
-              "description": "K to up",
+              "description": "Ctrl P to up",
               "from": {
-                  "key_code": "v"
+                  "key_code": "r",
+                  "modifiers":{
+                      "mandatory":["control"]
+                  }
               },
               "to": [
                   {
