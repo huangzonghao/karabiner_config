@@ -1,0 +1,107 @@
+{
+  "title": "Mail Keybindings",
+  "rules": [
+    {
+      "description": "Mail: Define Ctrl + H/L/P/N/D/U to navigate within Mail (for DV keyboard only)",
+      "manipulators": [
+          {
+              "description": "<C-P> to <Up> in Mail",
+              "from": {
+                  "key_code": "r",
+                  "modifiers":{
+                      "mandatory":["control"],
+                      "optional":["shift"]
+                  }
+              },
+              "to": [
+                  {
+                      "key_code": "up_arrow"
+                  }
+              ],
+              "conditions": [
+                  {
+                      "bundle_identifiers": [
+                          "^com\\.apple\\.mail$"
+                      ],
+                      "type": "frontmost_application_if"
+                  }
+              ],
+              "type": "basic"
+          },
+          {
+              "description": "<C-N> to <Down> in mail",
+              "from": {
+                  "key_code": "l",
+                  "modifiers":{
+                      "mandatory":["control"],
+                      "optional":["shift"]
+                  }
+              },
+              "to": [
+                  {
+                      "key_code": "down_arrow"
+                  }
+              ],
+              "conditions": [
+                  {
+                      "bundle_identifiers": [
+                          "^com\\.apple\\.mail$"
+                      ],
+                      "type": "frontmost_application_if"
+                  }
+              ],
+              "type": "basic"
+          },
+          {
+              "description": "<C-H> to <Left> in mail",
+              "from": {
+                  "key_code": "j",
+                  "modifiers":{
+                      "mandatory":["control"],
+                      "optional":["shift"]
+                  }
+              },
+              "to": [
+                  {
+                      "key_code": "left_arrow"
+                  }
+              ],
+              "conditions": [
+                  {
+                      "bundle_identifiers": [
+                          "^com\\.apple\\.mail$"
+                      ],
+                      "type": "frontmost_application_if"
+                  }
+              ],
+              "type": "basic"
+          },
+          {
+              "description": "<C-L> to <Right> in mail",
+              "from": {
+                  "key_code": "p",
+                  "modifiers":{
+                      "mandatory":["control"],
+                      "optional":["shift"]
+                  }
+              },
+              "to": [
+                  {
+                      "key_code": "right_arrow"
+                  }
+              ],
+              "conditions": [
+                  {
+                      "bundle_identifiers": [
+                          "^com\\.apple\\.mail$"
+                      ],
+                      "type": "frontmost_application_if"
+                  }
+              ],
+              "type": "basic"
+          }
+      ]
+    }
+  ]
+}
+
